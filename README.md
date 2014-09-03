@@ -20,22 +20,33 @@ Or install it yourself as:
 
 ## Usage
 
-    # gem initialization
-    Secrets::Config.configure do |config|
-      config.secrets_file = 'config/secrets.yml' # 'secrets.yml' by default
-    end
+This is used to configure gem
 
-    # secrets.yml
-    staging:
-      username: staging
-      password: secret
+```ruby
+# gem initialization
+Secrets::Config.configure do |config|
+  config.secrets_file = 'config/secrets.yml' # 'secrets.yml' by default
+end
+```
 
+This is possible structure of `secrets.yml` file
 
-    # Some file where secret value is needed
-    require 'secrets'
+```yaml
+# secrets.yml
+staging:
+  username: staging
+  password: secret
+```
 
-    Secrets.staging.username # => staging
-    Secrets.staging.password # => secret
+Somewhere where you need to access your secrets
+
+```ruby
+# Some file where secret value is needed
+require 'secrets'
+
+Secrets.staging.username # => "staging"
+Secrets.staging.password # => "secret"
+```
 
 ## Contributing
 
