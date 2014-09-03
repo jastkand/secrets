@@ -20,6 +20,11 @@ Or install it yourself as:
 
 ## Usage
 
+    # gem initialization
+    Secrets::Config.configure do |config|
+      config.secrets_file = 'config/secrets.yml' # 'secrets.yml' by default
+    end
+
     # secrets.yml
     staging:
       username: staging
