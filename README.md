@@ -1,6 +1,6 @@
 # Secrets
 
-Makes it easy to load config from `secrets.yml`
+Makes it easy to load config from `secrets.yml`. It's very handy for storing [Middleman](http://middlemanapp.com/) secrets.
 
 ## Installation
 
